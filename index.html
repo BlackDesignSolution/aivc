@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simulador de Ventas - Entrena tus Habilidades</title>
+    <meta name="description" content="Plataforma de entrenamiento para mejorar habilidades de ventas mediante simulaciones">
+    <meta name="keywords" content="ventas, entrenamiento, simulación, llamadas, capacitación">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Simulador de Ventas">
+    <meta property="og:description" content="Plataforma de entrenamiento para mejorar habilidades de ventas">
+    
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Simulador de Ventas">
+    <meta name="twitter:description" content="Plataforma de entrenamiento para mejorar habilidades de ventas">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+    <script>const ChartJS = window.Chart;</script>
+
+    <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary: #0D1433;
+            --primary-light: #171F55;
+            --secondary: #274272;
+            --accent: #6C90C3;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-gradient-to-r from-[#0D1433] to-[#171F55] hover:from-[#171F55] hover:to-[#274272] text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+        }
+        
+        .btn-secondary {
+            @apply bg-gradient-to-r from-[#6C90C3] to-[#274272] hover:from-[#274272] hover:to-[#6C90C3] text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg;
+        }
+        
+        .card {
+            @apply bg-white rounded-2xl shadow-xl p-6 border border-gray-100 backdrop-blur-sm hover:shadow-2xl transition-all duration-300;
+        }
+        
+        .input-field {
+            @apply w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#6C90C3] focus:border-[#274272] transition-all duration-300;
+        }
+        
+        .nav-item-active {
+            @apply bg-gradient-to-r from-[#0D1433] to-[#171F55] text-white border-r-4 border-[#6C90C3];
+        }
+        
+        .nav-item {
+            @apply text-[#274272] hover:bg-gradient-to-r hover:from-[#6C90C3]/10 hover:to-[#274272]/10 hover:text-[#0D1433];
+        }
+    }
+
+    @layer utilities {
+        .text-gradient {
+            background: linear-gradient(135deg, #0D1433 0%, #274272 50%, #6C90C3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bg-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(108, 144, 195, 0.15) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Login.js"></script>
+    <script type="text/babel" src="components/Introduction.js"></script>
+    <script type="text/babel" src="components/Layout.js"></script>
+    <script type="text/babel" src="components/MainDashboard.js"></script>
+    <script type="text/babel" src="components/SimulationTraining.js"></script>
+    <script type="text/babel" src="components/CallSimulation.js"></script>
+    <script type="text/babel" src="components/ScoresDashboard.js"></script>
+    <script type="text/babel" src="components/DetailedFeedback.js"></script>
+    <script type="text/babel" src="components/Feedback.js"></script>
+    <script type="text/babel" src="components/Team.js"></script>
+    <script type="text/babel" src="components/Courses.js"></script>
+    <script type="text/babel" src="components/Settings.js"></script>
+    <script type="text/babel" src="utils/simulationEngine.js"></script>
+    <script type="text/babel" src="utils/aiCallSimulation.js"></script>
+    <script type="text/babel" src="components/AICallSimulation.js"></script>
+    <script type="text/babel" src="components/GamificationDashboard.js"></script>
+    <script type="text/babel" src="components/IndustryModules.js"></script>
+    <script type="text/babel" src="components/CRMIntegration.js"></script>
+    <script type="text/babel" src="utils/gamificationSystem.js"></script>
+    <script type="text/babel" src="utils/industryScenarios.js"></script>
+    <script type="text/babel" src="utils/crmConnector.js"></script>
+    <script type="text/babel" src="components/UserManual.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
